@@ -1,3 +1,4 @@
+from tkinter import N
 from books import books
 
 print(books[0])
@@ -5,7 +6,7 @@ print(books[0])
 #  recieves a book dictionary
 #  returns the number of authors that the book has
 def number_of_authors(book):
-    ...
+ ...
 
 
 print(number_of_authors(books[0]))
@@ -15,7 +16,10 @@ print(number_of_authors(books[0]))
 #  # recieves a list of book dictionaries
 #  # returns the book dictionary with the same id as the book_id provided
 def get_book_by_id(book_id, books):
-    ...
+    for book in books:
+     if book_id == book['id']:
+        return book
+
 
 
 print(get_book_by_id(38, books))
@@ -27,7 +31,10 @@ print(get_book_by_id(38, books))
 # adds the summary to the book dictionary
 # return the book dictionary
 def add_summary_to_book(summary, book):
-    ...
+    add_summary = []
+    for book in books:
+        return add_summary.append(book)
+
 
 
 print(add_summary_to_book("this is a good book about", books[0]))
